@@ -5,8 +5,11 @@ load_dotenv()
 
 
 class Settings:
-    AI_API_KEY = os.getenv("AI_API_KEY")
-    AI_MODEL = os.getenv("AI_MODEL", "gpt-4o-mini")
+    OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+    OPENROUTER_MODEL = os.getenv(
+        "OPENROUTER_MODEL",
+        "openai/gpt-oss-20b:free"
+    )
 
 
 settings = Settings()
