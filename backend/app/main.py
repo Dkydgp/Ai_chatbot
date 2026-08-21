@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Cafe De Flora AI Assistant",
+    description="AI-powered customer support chatbot",
     version="1.0.0"
 )
 
