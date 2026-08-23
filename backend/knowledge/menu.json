@@ -1,0 +1,34 @@
+{
+  "menu": {
+    "categories": [
+      {
+        "name": "Breakfast",
+        "items": []
+      },
+      {
+        "name": "Starters",
+        "items": []
+      },
+      {
+        "name": "Main Course",
+        "items": []
+      },
+      {
+        "name": "Pizza",
+        "items": []
+      },
+      {
+        "name": "Pasta",
+        "items": []
+      },
+      {
+        "name": "Beverages",
+        "items": []
+      },
+      {
+        "name": "Desserts",
+        "items": []
+      }
+    ]
+  }
+}
