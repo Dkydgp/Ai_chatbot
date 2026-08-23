@@ -1,34 +1,190 @@
 {
   "menu": {
-    "categories": [
-      {
-        "name": "Breakfast",
-        "items": []
-      },
-      {
-        "name": "Starters",
-        "items": []
-      },
-      {
-        "name": "Main Course",
-        "items": []
-      },
-      {
-        "name": "Pizza",
-        "items": []
-      },
-      {
-        "name": "Pasta",
-        "items": []
-      },
-      {
-        "name": "Beverages",
-        "items": []
-      },
-      {
-        "name": "Desserts",
-        "items": []
-      }
-    ]
+    "last_checked": "2026-08-23",
+    "currency": "INR",
+    "note": "Prices are based on publicly available online menu listings and may change. Customers should confirm the current price with the cafe.",
+    "categories": {
+      "Breakfast": [
+        {
+          "name": "Avocado Sourdough Toast",
+          "price": 545
+        },
+        {
+          "name": "Burrata on Sourdough",
+          "price": 575
+        },
+        {
+          "name": "Mushroom Sourdough Toast",
+          "price": 525
+        },
+        {
+          "name": "French Brioche Toast",
+          "price": 395
+        },
+        {
+          "name": "Shakshuka",
+          "price": 369
+        },
+        {
+          "name": "Scrambled Eggs on Toast",
+          "price": 369
+        },
+        {
+          "name": "Flora Pancakes",
+          "price": 495
+        }
+      ],
+      "Soups": [
+        {
+          "name": "Zuppa Di Funghi",
+          "price": 345,
+          "description": "Mixed mushroom and truffle oil"
+        },
+        {
+          "name": "Tuscan Tomato Soup",
+          "price": 345,
+          "description": "Roasted tomatoes and basil-garlic"
+        },
+        {
+          "name": "Smoky Chicken Soup",
+          "price": 369,
+          "description": "Smoked chicken and garlic cream"
+        }
+      ],
+      "Appetizers": [
+        {
+          "name": "Loaded Fries",
+          "price": 449,
+          "type": "Vegetarian"
+        },
+        {
+          "name": "Peri Peri Fries",
+          "price": 295,
+          "type": "Vegetarian"
+        },
+        {
+          "name": "Chicken Satay",
+          "price": 545,
+          "type": "Non-vegetarian"
+        },
+        {
+          "name": "Chicken Souvlaki",
+          "price": 545,
+          "type": "Non-vegetarian"
+        },
+        {
+          "name": "Triple C Sliders",
+          "price": 499,
+          "type": "Non-vegetarian"
+        },
+        {
+          "name": "Peri Peri Chicken Tenders",
+          "price": 599,
+          "type": "Non-vegetarian"
+        }
+      ],
+      "Burgers_and_Sandwiches": [
+        {
+          "name": "Roasted Vegetables Ciabatta",
+          "price": 523,
+          "type": "Vegetarian"
+        },
+        {
+          "name": "Burger For Vegetarians",
+          "price": 523,
+          "type": "Vegetarian"
+        },
+        {
+          "name": "Croissant Caprese Sandwich",
+          "price": 523,
+          "type": "Vegetarian"
+        },
+        {
+          "name": "Roast Chicken Ciabatta",
+          "price": 549,
+          "type": "Non-vegetarian"
+        },
+        {
+          "name": "Flora Fried Chicken Burger",
+          "price": 579,
+          "type": "Non-vegetarian"
+        },
+        {
+          "name": "Smash Lamb Burger",
+          "price": 679,
+          "type": "Non-vegetarian"
+        }
+      ],
+      "Side_Kicks": [
+        {
+          "name": "Hummus Pita",
+          "price": 249
+        },
+        {
+          "name": "Tzatziki",
+          "price": 249
+        },
+        {
+          "name": "Garlic Bread",
+          "price": 219
+        },
+        {
+          "name": "Garlic Bread With Cheese",
+          "price": 249
+        },
+        {
+          "name": "Plain Croissant",
+          "price": 199
+        }
+      ],
+      "Desserts": [
+        {
+          "name": "Classic Tiramisu",
+          "price": 515
+        }
+      ],
+      "Beverages": [
+        {
+          "name": "Iced Caramel Latte",
+          "price": 339
+        },
+        {
+          "name": "Iced French Vanilla Latte",
+          "price": 339
+        },
+        {
+          "name": "Iced Latte",
+          "price": 389
+        },
+        {
+          "name": "Iced Mango Matcha Latte",
+          "price": 389
+        },
+        {
+          "name": "Iced Spanish Latte",
+          "price": 339
+        },
+        {
+          "name": "Iced Strawberry Matcha",
+          "price": 389
+        },
+        {
+          "name": "Iced Tiramisu Latte",
+          "price": 339
+        },
+        {
+          "name": "Iced Matcha",
+          "price": 369
+        },
+        {
+          "name": "Mixed Berry Smoothie",
+          "price": 379
+        },
+        {
+          "name": "Cold Chocolate",
+          "price": 389
+        }
+      ]
+    }
   }
 }
