@@ -18,7 +18,6 @@ business_data = load_json("business.json")
 menu_data = load_json("menu.json")
 
 
-# Words that help us understand common customer questions
 KEYWORD_GROUPS = {
     "pizza": ["pizza", "pizzas"],
     "pasta": ["pasta", "pastas"],
@@ -36,23 +35,59 @@ KEYWORD_GROUPS = {
         "vegetables",
         "vegetable"
     ],
-    "seafood": [
-        "seafood",
+    "non_vegetarian": [
+        "non veg",
+        "non-veg",
+        "non vegetarian",
+        "chicken",
         "fish",
         "prawn",
         "prawns",
-        "salmon"
+        "salmon",
+        "lamb",
+        "pepperoni"
     ]
 }
 
 
 def normalize(text):
     text = text.lower()
-    text = re.sub(r"[^a-z0-9\s]", " ", text)
+    text = re.sub(r"[^a-z0-9\s₹]", " ", text)
     return text
 
 
+def extract_price_limit(query):
+    """
+    Detect simple budget questions such as:
+    - under 500
+    - below ₹600
+    - less than 700
+    - within 500
+    """
+
+    query = normalize(query)
+
+    patterns = [
+        r"under\s*[₹rs\.]*\s*(\d+)",
+        r"below\s*[₹rs\.]*\s*(\d+)",
+        r"less\s+than\s*[₹rs\.]*\s*(\d+)",
+        r"within\s*[₹rs\.]*\s*(\d+)",
+        r"upto\s*[₹rs\.]*\s*(\d+)",
+        r"up\s+to\s*[₹rs\.]*\s*(\d+)"
+    ]
+
+    for pattern in patterns:
+
+        match = re.search(pattern, query)
+
+        if match:
+            return int(match.group(1))
+
+    return None
+
+
 def expand_query(query):
+
     query = normalize(query)
 
     words = set(query.split())
@@ -61,16 +96,57 @@ def expand_query(query):
 
     for group, synonyms in KEYWORD_GROUPS.items():
 
-        if any(word in words for word in synonyms):
+        if any(
+            synonym in query
+            for synonym in synonyms
+        ):
             expanded_words.add(group)
             expanded_words.update(synonyms)
 
     return expanded_words
 
 
+def is_vegetarian(item):
+
+    name = item.get("name", "").lower()
+    description = item.get("description", "").lower()
+
+    text = f"{name} {description}"
+
+    non_veg_words = [
+        "chicken",
+        "lamb",
+        "fish",
+        "prawn",
+        "prawns",
+        "salmon",
+        "pepperoni",
+        "bacon",
+        "sausage",
+        "pork"
+    ]
+
+    return not any(
+        word in text
+        for word in non_veg_words
+    )
+
+
 def search_menu(query: str):
 
     query_words = expand_query(query)
+
+    price_limit = extract_price_limit(query)
+
+    wants_vegetarian = (
+        "vegetarian" in query_words
+        or "veg" in query_words
+        or "veggie" in query_words
+    )
+
+    wants_non_vegetarian = (
+        "non_vegetarian" in query_words
+    )
 
     results = []
 
@@ -89,13 +165,17 @@ def search_menu(query: str):
 
             score = 0
 
-            # Match query words
+            # -------------------------
+            # Keyword matching
+            # -------------------------
+
             for word in query_words:
 
                 if len(word) > 2 and word in searchable_text:
                     score += 1
 
-            # Extra relevance for category matches
+            # Category matching gets extra weight
+
             category_text = normalize(category)
 
             for word in query_words:
@@ -103,25 +183,45 @@ def search_menu(query: str):
                 if word in category_text:
                     score += 2
 
-            # Vegetarian preference
-            if "vegetarian" in query_words:
+            # -------------------------
+            # Dietary filtering
+            # -------------------------
 
-                vegetarian_words = [
-                    "vegetarian",
-                    "veggie",
-                    "vegetables",
-                    "mushroom",
-                    "burrata",
-                    "margherita",
-                    "truffle",
-                    "funghi"
-                ]
+            vegetarian = is_vegetarian(item)
 
-                if any(
-                    word in searchable_text
-                    for word in vegetarian_words
-                ):
-                    score += 2
+            if wants_vegetarian:
+
+                if vegetarian:
+                    score += 5
+                else:
+                    continue
+
+            if wants_non_vegetarian:
+
+                if not vegetarian:
+                    score += 5
+                else:
+                    continue
+
+            # -------------------------
+            # Price filtering
+            # -------------------------
+
+            if price_limit is not None:
+
+                price = item.get("price")
+
+                if price is None:
+                    continue
+
+                if price <= price_limit:
+                    score += 5
+                else:
+                    continue
+
+            # -------------------------
+            # Save result
+            # -------------------------
 
             if score > 0:
 
