@@ -1,121 +1,390 @@
 {
   "menu": {
-    "last_checked": "2026-08-23",
+    "restaurant": "Cafe De Flora",
     "currency": "INR",
-    "note": "Prices are based on publicly available online menu listings and may change. Customers should confirm the current price with the cafe.",
+    "source": "Menu shown in user-provided screen recording",
+    "last_checked": "2026-08-23",
+    "price_note": "Prices shown are from the recorded menu and may change. The chatbot should recommend confirming the current price with the cafe.",
     "categories": {
-      "Breakfast": [
+      "Breakfast Menu": [
         {
           "name": "Avocado Sourdough Toast",
-          "price": 545
-        },
-        {
-          "name": "Burrata on Sourdough",
-          "price": 575
+          "price": 545,
+          "description": "Avocado-Pesto Tartar, Sundried Tomatoes, Arugula & Side Fries"
         },
         {
           "name": "Mushroom Sourdough Toast",
-          "price": 525
+          "price": 525,
+          "description": "Mixed Mushroom Ragout, Roast Onions, Truffle Oil & Side Fries"
+        },
+        {
+          "name": "Burrata On Sourdough",
+          "price": 575,
+          "description": "Red & Yellow Cherry Tomatoes, Pesto & Balsamic, Arugula & Side Fries"
         },
         {
           "name": "French Brioche Toast",
-          "price": 395
+          "price": 395,
+          "description": "Eggless French Toast, Maple Syrup, Mixed Berry Crush"
         },
         {
-          "name": "Shakshuka",
-          "price": 369
+          "name": "Scrambled Eggs On Sourdough",
+          "price": 525,
+          "description": "3 Eggs Scramble, Roast Leeks & Tomatoes, English Cheddar & Side Fries"
         },
         {
-          "name": "Scrambled Eggs on Toast",
-          "price": 369
+          "name": "Egg Avocado Toast",
+          "price": 555,
+          "description": "Creamy Smashed Avocado On Toasted Brioche, Poached Eggs, Microgreens & Signature Potato Hash Cake"
         },
         {
-          "name": "Flora Pancakes",
-          "price": 495
+          "name": "English Breakfast Set",
+          "price": 629,
+          "description": "Three Farm Eggs, Bacon, Herb-Grilled Sourdough, Roasted Tomato, Sausages, Baked Beans & Golden Hash Browns"
         }
       ],
-      "Soups": [
-        {
-          "name": "Zuppa Di Funghi",
-          "price": 345,
-          "description": "Mixed mushroom and truffle oil"
-        },
-        {
-          "name": "Tuscan Tomato Soup",
-          "price": 345,
-          "description": "Roasted tomatoes and basil-garlic"
-        },
-        {
-          "name": "Smoky Chicken Soup",
-          "price": 369,
-          "description": "Smoked chicken and garlic cream"
-        }
-      ],
+
       "Appetizers": [
         {
           "name": "Loaded Fries",
           "price": 449,
-          "type": "Vegetarian"
+          "description": "Cheese melt, jalapenos, gherkins, pickled paprika chillies"
         },
         {
           "name": "Peri Peri Fries",
           "price": 295,
-          "type": "Vegetarian"
+          "description": "French Fries With Peri-Peri Dust"
+        },
+        {
+          "name": "Truffle & Parmesan Potato Wedges",
+          "price": 395,
+          "description": "Fried Wedges With Skin, Truffle Oil, Parmesan"
+        },
+        {
+          "name": "Loaded Nachos",
+          "price": 495,
+          "description": "Refried Beans, Sour Cream, Guacamole, Picco De Gallo"
+        },
+        {
+          "name": "3 Cheese Fritters",
+          "price": 529,
+          "description": "Yellow Cheddar, Mozzarella, Parmesan, Chipotle Mayo"
+        },
+        {
+          "name": "Tomato Bruschetta",
+          "price": 419,
+          "description": "Fresh Mozzarella & Tomatoes, Balsamic Glaze, Pesto & Arugula"
+        },
+        {
+          "name": "Falafel Hummus Kawarma",
+          "price": 449,
+          "description": "Falafel, Hummus, Muhammara, Pickled Veggies, Pita"
+        },
+        {
+          "name": "Mediterranean Sliders",
+          "price": 449,
+          "description": "Falafel, Harissa Hot Sauce, Arugula"
+        },
+        {
+          "name": "Salted Fries",
+          "price": 249
         },
         {
           "name": "Chicken Satay",
           "price": 545,
-          "type": "Non-vegetarian"
+          "description": "Spicy peanut sauce, cucumber & onion salad"
+        },
+        {
+          "name": "Chipotle Chicken Croquettes",
+          "price": 529,
+          "description": "Pulled Roast Chicken, Roast Onions, Chipotle & Red Jalapenos"
         },
         {
           "name": "Chicken Souvlaki",
           "price": 545,
-          "type": "Non-vegetarian"
+          "description": "Za'Atar Chicken, Tzatziki, Chunky Salad, Pita Bread"
         },
         {
-          "name": "Triple C Sliders",
+          "name": "Butter-Garlic Prawns",
+          "price": 745,
+          "description": "Avocado Tartar, Roast Tomatoes, Baguette"
+        },
+        {
+          "name": "BBQ Chicken Wings",
+          "price": 449,
+          "description": "Chicken Wings Served With Ranch Sauce, Carrots & Celery"
+        },
+        {
+          "name": "Smoked Chicken Bruschetta",
+          "price": 529,
+          "description": "Chicken Mousse, Roast Chicken, Sundries Tomato Pesto"
+        },
+        {
+          "name": "Chicken Hummus Kawarma",
+          "price": 479,
+          "description": "Shish Taouk, Hummus, Muhammara, Pickled Veggies, Pita"
+        },
+        {
+          "name": "Triple 'C' Sliders",
           "price": 499,
-          "type": "Non-vegetarian"
+          "description": "Chicken, Chipotle & Cheddar"
         },
         {
           "name": "Peri Peri Chicken Tenders",
           "price": 599,
-          "type": "Non-vegetarian"
+          "description": "Crispy Peri Peri Chicken Tenders Served Alongside French Mustard"
         }
       ],
-      "Burgers_and_Sandwiches": [
+
+      "Burgers & Sandwiches": [
         {
           "name": "Roasted Vegetables Ciabatta",
           "price": 523,
-          "type": "Vegetarian"
-        },
-        {
-          "name": "Burger For Vegetarians",
-          "price": 523,
-          "type": "Vegetarian"
+          "description": "Roast Veggie & Pesto, Arugula, Feta"
         },
         {
           "name": "Croissant Caprese Sandwich",
           "price": 523,
-          "type": "Vegetarian"
+          "description": "Pesto, Tomatoes, Bocconcini, Sundried Tomato Pate"
+        },
+        {
+          "name": "Burger For Vegetarians",
+          "price": 523,
+          "description": "Mixed Veggie Patty, Chipotle Mayo"
         },
         {
           "name": "Roast Chicken Ciabatta",
           "price": 549,
-          "type": "Non-vegetarian"
+          "description": "Roast Chicken, Sundries Tomato Pesto, Romaine"
+        },
+        {
+          "name": "Mayo Chicken Focaccia",
+          "price": 549,
+          "description": "Classic Mayo Chicken, Slaw, Jalapeno And Capers"
         },
         {
           "name": "Flora Fried Chicken Burger",
           "price": 579,
-          "type": "Non-vegetarian"
+          "description": "Ranch & Chilli Chipotle Sauce"
         },
         {
           "name": "Smash Lamb Burger",
           "price": 679,
-          "type": "Non-vegetarian"
+          "description": "Caramelized Onions, English Cheddar, Pommery Mustard Sauce"
+        },
+        {
+          "name": "OG Chicken Burger",
+          "price": 549,
+          "description": "Grilled Chicken Patty, Lettuce, Coleslaw, Jalapeño"
         }
       ],
-      "Side_Kicks": [
+
+      "Pizzas & Pastas": [
+        {
+          "name": "Margherita Pizza",
+          "price": 679,
+          "description": "Tomato Sauce, Fresh Mozzarella & Basil"
+        },
+        {
+          "name": "Burrata Pizza",
+          "price": 845,
+          "description": "Tomatoes, Arugula, Pesto & Pinenuts"
+        },
+        {
+          "name": "All Veggie Pizza",
+          "price": 729
+        },
+        {
+          "name": "Truffle & Funghi Pizza",
+          "price": 729,
+          "description": "Mixed Shrooms, Truffle Oil & Parmesan"
+        },
+        {
+          "name": "Chicken Picante Pizza",
+          "price": 759,
+          "description": "Pulled Roast Chicken, Red Jalapenos, Sundried Tomato Pesto"
+        },
+        {
+          "name": "All Chicken Pizza",
+          "price": 745,
+          "description": "Roast Chicken, Chicken Salami & Smoked Chicken"
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "price": 795,
+          "description": "Classic Pork Chorizo"
+        },
+        {
+          "name": "Pesto Chicken Mortadella Pizza",
+          "price": 789,
+          "description": "Basil Pesto Sauce, Italian Chicken & Pistachio Salami, Roasted Pistachios, Basil & Parmesan"
+        },
+        {
+          "name": "Marinara Pizza",
+          "price": 579,
+          "description": "A Classic Street Pizza With No Cheese"
+        },
+        {
+          "name": "Arrabiata Pasta",
+          "price": 595,
+          "description": "Spicy Tomato Sauce"
+        },
+        {
+          "name": "Cheesy Pasta",
+          "price": 595,
+          "description": "Classic Alfredo With Cheese"
+        },
+        {
+          "name": "Fettuccine Mushroom & Truffle Pasta",
+          "price": 629,
+          "description": "Handmade House Pasta, Mixed Mushrooms, Truffle Oil"
+        },
+        {
+          "name": "Spaghetti Aglio E Olio Peperoncino Pasta",
+          "price": 595,
+          "description": "Classic With Olive Oil, Parmesan & Chilli Flakes"
+        },
+        {
+          "name": "Pesto Crema Pasta",
+          "price": 595,
+          "description": "Basil Pesto & Cream Sauce"
+        },
+        {
+          "name": "Spaghetti Martino Pasta",
+          "price": 595,
+          "description": "A Creamy Blend Of Arrabiata And Alfredo"
+        },
+        {
+          "name": "Baked Pasta",
+          "price": 595
+        }
+      ],
+
+      "Mains & Bowls": [
+        {
+          "name": "Chipotle Cottage Cheese Bowl",
+          "price": 699,
+          "description": "Grilled cottage cheese, chipotle rice, marinated red beans & avocado, smoky chipotle cream sauce"
+        },
+        {
+          "name": "Crispy Chicken Bowl",
+          "price": 765,
+          "description": "Crisp fried chicken, steamed jasmine rice, red cabbage salad, hot curry sauce"
+        },
+        {
+          "name": "Crispy Tofu Bowl",
+          "price": 699,
+          "description": "Golden fried tofu, steamed jasmine rice, red cabbage & spinach salad, hot curry sauce"
+        },
+        {
+          "name": "Peruvian Chicken Bowl",
+          "price": 765,
+          "description": "Grilled Chicken, Peruvian green chilli sauce, sweet pepper rice, corn & bean salad, plantain chips"
+        },
+        {
+          "name": "Za'atar Crusted Cottage Cheese Bowl",
+          "price": 765,
+          "description": "Herbed spinach rice, grilled zucchini, tzatziki, creamed garlic sauce, confit garlic, Greek salad"
+        },
+        {
+          "name": "Cottage Cheese Steak",
+          "price": 699,
+          "description": "Veg Preparation, Harissa Hot Sauce, Sauteed Vegetables, Herbed Rice"
+        },
+        {
+          "name": "Evergreen Risotto",
+          "price": 649,
+          "description": "Pesto Risotto, Brie Fritter & Heirloom Tomatoes"
+        },
+        {
+          "name": "Peppercorn Grilled Chicken Breast",
+          "price": 765,
+          "description": "Grilled Chicken Breast & Vegetables, Mashed Potatoes, 3 Pepper Sauce"
+        },
+        {
+          "name": "Sole Of The Grill",
+          "price": 845,
+          "description": "Provençale Sauce, Roast Potatoes, Charred Greens"
+        },
+        {
+          "name": "Salmon Fillet",
+          "price": 1199,
+          "description": "Lemon Beurre Blanc Sauce, Roast Potatoes, Wilted Greens & Edamame"
+        },
+        {
+          "name": "Tuscan Chicken",
+          "price": 765,
+          "description": "Grilled Chicken, Tuscan Tomato Sauce, Sautéed Vegetables & Baby Potatoes"
+        },
+        {
+          "name": "French Onion Chicken",
+          "price": 765,
+          "description": "Our House Version Of The Classic French Soup"
+        },
+        {
+          "name": "Fish And Chips",
+          "price": 845,
+          "description": "Fillet Of Sole, Tartar Sauce, Thick Cut Fries"
+        },
+        {
+          "name": "Greek Chicken Bowl",
+          "price": 765,
+          "description": "Grilled Lemon-Oregano Chicken, Herbed Rice, Tzatziki, Greek Salad With Feta, Grilled Zucchini"
+        },
+        {
+          "name": "Chipotle Chicken Bowl",
+          "price": 765,
+          "description": "Roast Chipotle Cottage Cheese, Mexican Tomato Rice, Marinated Red Beans & Avocados, Corn Chops, Picco De Gallo"
+        },
+        {
+          "name": "Mediterranean Bowl",
+          "price": 699,
+          "description": "Falafels, Hummus, Herbed Rice, Harissa Hot Sauce, Tabbouleh, Roast Butternut Squash"
+        }
+      ],
+
+      "Salads": [
+        {
+          "name": "Flora House Salad",
+          "price": 495,
+          "description": "Red & White Quinoa, Honey-Mustard & Sweet Chilli Dressing, Mixed Lettuce, Feta"
+        },
+        {
+          "name": "Caesar Salad",
+          "price": 495,
+          "description": "Classic Mayonnaise & Parmesan Dressing, Romaine Lettuce, Melba Toast"
+        },
+        {
+          "name": "Burrata Salad",
+          "price": 655,
+          "description": "Basil Pesto, Heirloom Tomatoes, Arugula, Baguette, Balsamic Glaze"
+        },
+        {
+          "name": "Smoked Chicken Salad",
+          "price": 545,
+          "description": "Chilli-Citrus Dressing, Chipotle Chicken, Mixed Lettuce, Black Olives, Red Onions, California Grapes & Jalapeno"
+        }
+      ],
+
+      "Soups": [
+        {
+          "name": "Zuppa Di Funghi",
+          "price": 345,
+          "description": "Mixed Mushroom & Truffle Oil"
+        },
+        {
+          "name": "Tuscan Tomato Soup",
+          "price": 345,
+          "description": "Slow Roast Tomatoes & Basil-Garlic"
+        },
+        {
+          "name": "Smoky Chicken Soup",
+          "price": 369,
+          "description": "Smoked Chicken & Garlic Cream"
+        }
+      ],
+
+      "Side Kicks": [
         {
           "name": "Hummus Pita",
           "price": 249
@@ -137,13 +406,31 @@
           "price": 199
         }
       ],
+
       "Desserts": [
         {
           "name": "Classic Tiramisu",
-          "price": 515
+          "price": 395
         }
       ],
-      "Beverages": [
+
+      "Drinks (Beverages)": [
+        {
+          "name": "Abc",
+          "price": 309
+        },
+        {
+          "name": "Orange Fresh Juice",
+          "price": 330
+        },
+        {
+          "name": "Watermelon Fresh Juice",
+          "price": 289
+        },
+        {
+          "name": "Pineapple Fresh Juice",
+          "price": 330
+        },
         {
           "name": "Iced Caramel Latte",
           "price": 339
@@ -154,11 +441,15 @@
         },
         {
           "name": "Iced Latte",
-          "price": 389
+          "price": 299
         },
         {
           "name": "Iced Mango Matcha Latte",
           "price": 389
+        },
+        {
+          "name": "Iced Roasted Hazelnut Latte",
+          "price": 339
         },
         {
           "name": "Iced Spanish Latte",
@@ -173,8 +464,99 @@
           "price": 339
         },
         {
+          "name": "Bean Frappe Iced Vanilla",
+          "price": 349
+        },
+        {
           "name": "Iced Matcha",
           "price": 369
+        },
+        {
+          "name": "Peach Iced Tea",
+          "price": 269
+        },
+        {
+          "name": "Lemon Iced Tea",
+          "price": 269
+        },
+        {
+          "name": "Hibiscus Iced Tea",
+          "price": 269
+        },
+        {
+          "name": "Kokum Chilli Spritz",
+          "price": 349,
+          "description": "Kokum Crush, Sabza Seeds, Fresh Green Chilli, Lemonade"
+        },
+        {
+          "name": "Citrus Berry Fizz",
+          "price": 349,
+          "description": "Orange Chunks, Mint Leaves, Blueberry Crush, Sweet & Sour"
+        },
+        {
+          "name": "Tropical Lush",
+          "price": 349,
+          "description": "Passionfruit Puree, Elderflower, Fresh Pineapple Juice, Kaffir Lime Leaf"
+        },
+        {
+          "name": "Melonen Minz Bliss",
+          "price": 349,
+          "description": "Fresh Watermelon, Curry Leaves, Kokum Crush, Sweet & Sour"
+        },
+        {
+          "name": "Cilantro Citrus Splash",
+          "price": 349,
+          "description": "Homemade Brine, Fresh Orange Juice, Fresh Coriander, Passionfruit"
+        },
+        {
+          "name": "Just Peachy",
+          "price": 349,
+          "description": "Caramelised Peach, Citrus, Rose, with a hint of spices, tonic water"
+        },
+        {
+          "name": "Virgin Mint Mojito",
+          "price": 309
+        },
+        {
+          "name": "Green Apple Mojito",
+          "price": 309
+        },
+        {
+          "name": "Water Melon Mojito",
+          "price": 309
+        },
+        {
+          "name": "Passion Fruit Mojito",
+          "price": 309
+        },
+        {
+          "name": "Mixed Berry Granola Smoothie Bowl",
+          "price": 489,
+          "description": "Toasted Rolled Oats, Mixed Berry Smoothie, Blueberries, Candied Nuts, Granola"
+        },
+        {
+          "name": "Chocolate & Oreo Shake",
+          "price": 379
+        },
+        {
+          "name": "Tiramisu Coco - Chocolate Shake",
+          "price": 379
+        },
+        {
+          "name": "Kit Kat Chocolate Shake",
+          "price": 379
+        },
+        {
+          "name": "Blueberry Shake",
+          "price": 379
+        },
+        {
+          "name": "Lotus Biscoff Shake",
+          "price": 379
+        },
+        {
+          "name": "Mango & Banana Smoothie",
+          "price": 379
         },
         {
           "name": "Mixed Berry Smoothie",
