@@ -1,0 +1,35 @@
+{
+  "business": {
+    "name": "Cafe De Flora",
+    "type": "Cafe and Restaurant",
+    "location": {
+      "address": "Shop 24 & 25, West Flank, Santushti Shopping Complex, Chanakyapuri, New Delhi - 110021",
+      "area": "Chanakyapuri",
+      "city": "New Delhi",
+      "country": "India"
+    },
+    "contact": {
+      "phone": "+91 88829 27513"
+    },
+    "hours": {
+      "monday": "9:00 AM - 9:30 PM",
+      "tuesday": "9:00 AM - 9:30 PM",
+      "wednesday": "9:00 AM - 9:30 PM",
+      "thursday": "9:00 AM - 9:30 PM",
+      "friday": "9:00 AM - 9:30 PM",
+      "saturday": "9:00 AM - 9:30 PM",
+      "sunday": "9:00 AM - 9:30 PM"
+    },
+    "cuisines": [
+      "Italian",
+      "Continental",
+      "Bakery",
+      "Pizza",
+      "Burgers",
+      "Desserts",
+      "Beverages"
+    ],
+    "description": "Cafe De Flora is a cafe and restaurant located at Santushti Shopping Complex in Chanakyapuri, New Delhi. The cafe focuses on coffee, fresh food, baked items, desserts and a relaxed cafe experience.",
+    "website": "https://cafedeflora.com/"
+  }
+}
