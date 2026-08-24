@@ -10,561 +10,666 @@
         {
           "name": "Avocado Sourdough Toast",
           "price": 545,
-          "description": "Avocado-Pesto Tartar, Sundried Tomatoes, Arugula & Side Fries"
+          "description": "Avocado-Pesto Tartar, Sundried Tomatoes, Arugula & Side Fries",
+          "diet": "veg"
         },
         {
           "name": "Mushroom Sourdough Toast",
           "price": 525,
-          "description": "Mixed Mushroom Ragout, Roast Onions, Truffle Oil & Side Fries"
+          "description": "Mixed Mushroom Ragout, Roast Onions, Truffle Oil & Side Fries",
+          "diet": "veg"
         },
         {
           "name": "Burrata On Sourdough",
           "price": 575,
-          "description": "Red & Yellow Cherry Tomatoes, Pesto & Balsamic, Arugula & Side Fries"
+          "description": "Red & Yellow Cherry Tomatoes, Pesto & Balsamic, Arugula & Side Fries",
+          "diet": "veg"
         },
         {
           "name": "French Brioche Toast",
           "price": 395,
-          "description": "Eggless French Toast, Maple Syrup, Mixed Berry Crush"
+          "description": "Eggless French Toast, Maple Syrup, Mixed Berry Crush",
+          "diet": "veg"
         },
         {
           "name": "Scrambled Eggs On Sourdough",
           "price": 525,
-          "description": "3 Eggs Scramble, Roast Leeks & Tomatoes, English Cheddar & Side Fries"
+          "description": "3 Eggs Scramble, Roast Leeks & Tomatoes, English Cheddar & Side Fries",
+          "diet": "non-veg"
         },
         {
           "name": "Egg Avocado Toast",
           "price": 555,
-          "description": "Creamy Smashed Avocado On Toasted Brioche, Poached Eggs, Microgreens & Signature Potato Hash Cake"
+          "description": "Creamy Smashed Avocado On Toasted Brioche, Poached Eggs, Microgreens & Signature Potato Hash Cake",
+          "diet": "non-veg"
         },
         {
           "name": "English Breakfast Set",
           "price": 629,
-          "description": "Three Farm Eggs, Bacon, Herb-Grilled Sourdough, Roasted Tomato, Sausages, Baked Beans & Golden Hash Browns"
+          "description": "Three Farm Eggs, Bacon, Herb-Grilled Sourdough, Roasted Tomato, Sausages, Baked Beans & Golden Hash Browns",
+          "diet": "non-veg"
         }
       ],
-
       "Appetizers": [
         {
           "name": "Loaded Fries",
           "price": 449,
-          "description": "Cheese melt, jalapenos, gherkins, pickled paprika chillies"
+          "description": "Cheese melt, jalapenos, gherkins, pickled paprika chillies",
+          "diet": "veg"
         },
         {
           "name": "Peri Peri Fries",
           "price": 295,
-          "description": "French Fries With Peri-Peri Dust"
+          "description": "French Fries With Peri-Peri Dust",
+          "diet": "veg"
         },
         {
           "name": "Truffle & Parmesan Potato Wedges",
           "price": 395,
-          "description": "Fried Wedges With Skin, Truffle Oil, Parmesan"
+          "description": "Fried Wedges With Skin, Truffle Oil, Parmesan",
+          "diet": "veg"
         },
         {
           "name": "Loaded Nachos",
           "price": 495,
-          "description": "Refried Beans, Sour Cream, Guacamole, Picco De Gallo"
+          "description": "Refried Beans, Sour Cream, Guacamole, Picco De Gallo",
+          "diet": "veg"
         },
         {
           "name": "3 Cheese Fritters",
           "price": 529,
-          "description": "Yellow Cheddar, Mozzarella, Parmesan, Chipotle Mayo"
+          "description": "Yellow Cheddar, Mozzarella, Parmesan, Chipotle Mayo",
+          "diet": "veg"
         },
         {
           "name": "Tomato Bruschetta",
           "price": 419,
-          "description": "Fresh Mozzarella & Tomatoes, Balsamic Glaze, Pesto & Arugula"
+          "description": "Fresh Mozzarella & Tomatoes, Balsamic Glaze, Pesto & Arugula",
+          "diet": "veg"
         },
         {
           "name": "Falafel Hummus Kawarma",
           "price": 449,
-          "description": "Falafel, Hummus, Muhammara, Pickled Veggies, Pita"
+          "description": "Falafel, Hummus, Muhammara, Pickled Veggies, Pita",
+          "diet": "veg"
         },
         {
           "name": "Mediterranean Sliders",
           "price": 449,
-          "description": "Falafel, Harissa Hot Sauce, Arugula"
+          "description": "Falafel, Harissa Hot Sauce, Arugula",
+          "diet": "veg"
         },
         {
           "name": "Salted Fries",
-          "price": 249
+          "price": 249,
+          "diet": "veg"
         },
         {
           "name": "Chicken Satay",
           "price": 545,
-          "description": "Spicy peanut sauce, cucumber & onion salad"
+          "description": "Spicy peanut sauce, cucumber & onion salad",
+          "diet": "non-veg"
         },
         {
           "name": "Chipotle Chicken Croquettes",
           "price": 529,
-          "description": "Pulled Roast Chicken, Roast Onions, Chipotle & Red Jalapenos"
+          "description": "Pulled Roast Chicken, Roast Onions, Chipotle & Red Jalapenos",
+          "diet": "non-veg"
         },
         {
           "name": "Chicken Souvlaki",
           "price": 545,
-          "description": "Za'Atar Chicken, Tzatziki, Chunky Salad, Pita Bread"
+          "description": "Za'Atar Chicken, Tzatziki, Chunky Salad, Pita Bread",
+          "diet": "non-veg"
         },
         {
           "name": "Butter-Garlic Prawns",
           "price": 745,
-          "description": "Avocado Tartar, Roast Tomatoes, Baguette"
+          "description": "Avocado Tartar, Roast Tomatoes, Baguette",
+          "diet": "non-veg"
         },
         {
           "name": "BBQ Chicken Wings",
           "price": 449,
-          "description": "Chicken Wings Served With Ranch Sauce, Carrots & Celery"
+          "description": "Chicken Wings Served With Ranch Sauce, Carrots & Celery",
+          "diet": "non-veg"
         },
         {
           "name": "Smoked Chicken Bruschetta",
           "price": 529,
-          "description": "Chicken Mousse, Roast Chicken, Sundries Tomato Pesto"
+          "description": "Chicken Mousse, Roast Chicken, Sundries Tomato Pesto",
+          "diet": "non-veg"
         },
         {
           "name": "Chicken Hummus Kawarma",
           "price": 479,
-          "description": "Shish Taouk, Hummus, Muhammara, Pickled Veggies, Pita"
+          "description": "Shish Taouk, Hummus, Muhammara, Pickled Veggies, Pita",
+          "diet": "non-veg"
         },
         {
           "name": "Triple 'C' Sliders",
           "price": 499,
-          "description": "Chicken, Chipotle & Cheddar"
+          "description": "Chicken, Chipotle & Cheddar",
+          "diet": "non-veg"
         },
         {
           "name": "Peri Peri Chicken Tenders",
           "price": 599,
-          "description": "Crispy Peri Peri Chicken Tenders Served Alongside French Mustard"
+          "description": "Crispy Peri Peri Chicken Tenders Served Alongside French Mustard",
+          "diet": "non-veg"
         }
       ],
-
       "Burgers & Sandwiches": [
         {
           "name": "Roasted Vegetables Ciabatta",
           "price": 523,
-          "description": "Roast Veggie & Pesto, Arugula, Feta"
+          "description": "Roast Veggie & Pesto, Arugula, Feta",
+          "diet": "veg"
         },
         {
           "name": "Croissant Caprese Sandwich",
           "price": 523,
-          "description": "Pesto, Tomatoes, Bocconcini, Sundried Tomato Pate"
+          "description": "Pesto, Tomatoes, Bocconcini, Sundried Tomato Pate",
+          "diet": "veg"
         },
         {
           "name": "Burger For Vegetarians",
           "price": 523,
-          "description": "Mixed Veggie Patty, Chipotle Mayo"
+          "description": "Mixed Veggie Patty, Chipotle Mayo",
+          "diet": "veg"
         },
         {
           "name": "Roast Chicken Ciabatta",
           "price": 549,
-          "description": "Roast Chicken, Sundries Tomato Pesto, Romaine"
+          "description": "Roast Chicken, Sundries Tomato Pesto, Romaine",
+          "diet": "non-veg"
         },
         {
           "name": "Mayo Chicken Focaccia",
           "price": 549,
-          "description": "Classic Mayo Chicken, Slaw, Jalapeno And Capers"
+          "description": "Classic Mayo Chicken, Slaw, Jalapeno And Capers",
+          "diet": "non-veg"
         },
         {
           "name": "Flora Fried Chicken Burger",
           "price": 579,
-          "description": "Ranch & Chilli Chipotle Sauce"
+          "description": "Ranch & Chilli Chipotle Sauce",
+          "diet": "non-veg"
         },
         {
           "name": "Smash Lamb Burger",
           "price": 679,
-          "description": "Caramelized Onions, English Cheddar, Pommery Mustard Sauce"
+          "description": "Caramelized Onions, English Cheddar, Pommery Mustard Sauce",
+          "diet": "non-veg"
         },
         {
           "name": "OG Chicken Burger",
           "price": 549,
-          "description": "Grilled Chicken Patty, Lettuce, Coleslaw, Jalapeño"
+          "description": "Grilled Chicken Patty, Lettuce, Coleslaw, Jalapeño",
+          "diet": "non-veg"
         }
       ],
-
       "Pizzas & Pastas": [
         {
           "name": "Margherita Pizza",
           "price": 679,
-          "description": "Tomato Sauce, Fresh Mozzarella & Basil"
+          "description": "Tomato Sauce, Fresh Mozzarella & Basil",
+          "diet": "veg"
         },
         {
           "name": "Burrata Pizza",
           "price": 845,
-          "description": "Tomatoes, Arugula, Pesto & Pinenuts"
+          "description": "Tomatoes, Arugula, Pesto & Pinenuts",
+          "diet": "veg"
         },
         {
           "name": "All Veggie Pizza",
-          "price": 729
+          "price": 729,
+          "diet": "veg"
         },
         {
           "name": "Truffle & Funghi Pizza",
           "price": 729,
-          "description": "Mixed Shrooms, Truffle Oil & Parmesan"
+          "description": "Mixed Shrooms, Truffle Oil & Parmesan",
+          "diet": "veg"
         },
         {
           "name": "Chicken Picante Pizza",
           "price": 759,
-          "description": "Pulled Roast Chicken, Red Jalapenos, Sundried Tomato Pesto"
+          "description": "Pulled Roast Chicken, Red Jalapenos, Sundried Tomato Pesto",
+          "diet": "non-veg"
         },
         {
           "name": "All Chicken Pizza",
           "price": 745,
-          "description": "Roast Chicken, Chicken Salami & Smoked Chicken"
+          "description": "Roast Chicken, Chicken Salami & Smoked Chicken",
+          "diet": "non-veg"
         },
         {
           "name": "Pepperoni Pizza",
           "price": 795,
-          "description": "Classic Pork Chorizo"
+          "description": "Classic Pork Chorizo",
+          "diet": "non-veg"
         },
         {
           "name": "Pesto Chicken Mortadella Pizza",
           "price": 789,
-          "description": "Basil Pesto Sauce, Italian Chicken & Pistachio Salami, Roasted Pistachios, Basil & Parmesan"
+          "description": "Basil Pesto Sauce, Italian Chicken & Pistachio Salami, Roasted Pistachios, Basil & Parmesan",
+          "diet": "non-veg"
         },
         {
           "name": "Marinara Pizza",
           "price": 579,
-          "description": "A Classic Street Pizza With No Cheese"
+          "description": "A Classic Street Pizza With No Cheese",
+          "diet": "veg"
         },
         {
           "name": "Arrabiata Pasta",
           "price": 595,
-          "description": "Spicy Tomato Sauce"
+          "description": "Spicy Tomato Sauce",
+          "diet": "veg"
         },
         {
           "name": "Cheesy Pasta",
           "price": 595,
-          "description": "Classic Alfredo With Cheese"
+          "description": "Classic Alfredo With Cheese",
+          "diet": "veg"
         },
         {
           "name": "Fettuccine Mushroom & Truffle Pasta",
           "price": 629,
-          "description": "Handmade House Pasta, Mixed Mushrooms, Truffle Oil"
+          "description": "Handmade House Pasta, Mixed Mushrooms, Truffle Oil",
+          "diet": "non-veg"
         },
         {
           "name": "Spaghetti Aglio E Olio Peperoncino Pasta",
           "price": 595,
-          "description": "Classic With Olive Oil, Parmesan & Chilli Flakes"
+          "description": "Classic With Olive Oil, Parmesan & Chilli Flakes",
+          "diet": "veg"
         },
         {
           "name": "Pesto Crema Pasta",
           "price": 595,
-          "description": "Basil Pesto & Cream Sauce"
+          "description": "Basil Pesto & Cream Sauce",
+          "diet": "veg"
         },
         {
           "name": "Spaghetti Martino Pasta",
           "price": 595,
-          "description": "A Creamy Blend Of Arrabiata And Alfredo"
+          "description": "A Creamy Blend Of Arrabiata And Alfredo",
+          "diet": "veg"
         },
         {
           "name": "Baked Pasta",
-          "price": 595
+          "price": 595,
+          "diet": "veg"
         }
       ],
-
       "Mains & Bowls": [
         {
           "name": "Chipotle Cottage Cheese Bowl",
           "price": 699,
-          "description": "Grilled cottage cheese, chipotle rice, marinated red beans & avocado, smoky chipotle cream sauce"
+          "description": "Grilled cottage cheese, chipotle rice, marinated red beans & avocado, smoky chipotle cream sauce",
+          "diet": "veg"
         },
         {
           "name": "Crispy Chicken Bowl",
           "price": 765,
-          "description": "Crisp fried chicken, steamed jasmine rice, red cabbage salad, hot curry sauce"
+          "description": "Crisp fried chicken, steamed jasmine rice, red cabbage salad, hot curry sauce",
+          "diet": "non-veg"
         },
         {
           "name": "Crispy Tofu Bowl",
           "price": 699,
-          "description": "Golden fried tofu, steamed jasmine rice, red cabbage & spinach salad, hot curry sauce"
+          "description": "Golden fried tofu, steamed jasmine rice, red cabbage & spinach salad, hot curry sauce",
+          "diet": "veg"
         },
         {
           "name": "Peruvian Chicken Bowl",
           "price": 765,
-          "description": "Grilled Chicken, Peruvian green chilli sauce, sweet pepper rice, corn & bean salad, plantain chips"
+          "description": "Grilled Chicken, Peruvian green chilli sauce, sweet pepper rice, corn & bean salad, plantain chips",
+          "diet": "non-veg"
         },
         {
           "name": "Za'atar Crusted Cottage Cheese Bowl",
           "price": 765,
-          "description": "Herbed spinach rice, grilled zucchini, tzatziki, creamed garlic sauce, confit garlic, Greek salad"
+          "description": "Herbed spinach rice, grilled zucchini, tzatziki, creamed garlic sauce, confit garlic, Greek salad",
+          "diet": "veg"
         },
         {
           "name": "Cottage Cheese Steak",
           "price": 699,
-          "description": "Veg Preparation, Harissa Hot Sauce, Sauteed Vegetables, Herbed Rice"
+          "description": "Veg Preparation, Harissa Hot Sauce, Sauteed Vegetables, Herbed Rice",
+          "diet": "veg"
         },
         {
           "name": "Evergreen Risotto",
           "price": 649,
-          "description": "Pesto Risotto, Brie Fritter & Heirloom Tomatoes"
+          "description": "Pesto Risotto, Brie Fritter & Heirloom Tomatoes",
+          "diet": "veg"
         },
         {
           "name": "Peppercorn Grilled Chicken Breast",
           "price": 765,
-          "description": "Grilled Chicken Breast & Vegetables, Mashed Potatoes, 3 Pepper Sauce"
+          "description": "Grilled Chicken Breast & Vegetables, Mashed Potatoes, 3 Pepper Sauce",
+          "diet": "non-veg"
         },
         {
           "name": "Sole Of The Grill",
           "price": 845,
-          "description": "Provençale Sauce, Roast Potatoes, Charred Greens"
+          "description": "Provençale Sauce, Roast Potatoes, Charred Greens",
+          "diet": "veg"
         },
         {
           "name": "Salmon Fillet",
           "price": 1199,
-          "description": "Lemon Beurre Blanc Sauce, Roast Potatoes, Wilted Greens & Edamame"
+          "description": "Lemon Beurre Blanc Sauce, Roast Potatoes, Wilted Greens & Edamame",
+          "diet": "non-veg"
         },
         {
           "name": "Tuscan Chicken",
           "price": 765,
-          "description": "Grilled Chicken, Tuscan Tomato Sauce, Sautéed Vegetables & Baby Potatoes"
+          "description": "Grilled Chicken, Tuscan Tomato Sauce, Sautéed Vegetables & Baby Potatoes",
+          "diet": "non-veg"
         },
         {
           "name": "French Onion Chicken",
           "price": 765,
-          "description": "Our House Version Of The Classic French Soup"
+          "description": "Our House Version Of The Classic French Soup",
+          "diet": "non-veg"
         },
         {
           "name": "Fish And Chips",
           "price": 845,
-          "description": "Fillet Of Sole, Tartar Sauce, Thick Cut Fries"
+          "description": "Fillet Of Sole, Tartar Sauce, Thick Cut Fries",
+          "diet": "non-veg"
         },
         {
           "name": "Greek Chicken Bowl",
           "price": 765,
-          "description": "Grilled Lemon-Oregano Chicken, Herbed Rice, Tzatziki, Greek Salad With Feta, Grilled Zucchini"
+          "description": "Grilled Lemon-Oregano Chicken, Herbed Rice, Tzatziki, Greek Salad With Feta, Grilled Zucchini",
+          "diet": "non-veg"
         },
         {
           "name": "Chipotle Chicken Bowl",
           "price": 765,
-          "description": "Roast Chipotle Cottage Cheese, Mexican Tomato Rice, Marinated Red Beans & Avocados, Corn Chops, Picco De Gallo"
+          "description": "Roast Chipotle Cottage Cheese, Mexican Tomato Rice, Marinated Red Beans & Avocados, Corn Chops, Picco De Gallo",
+          "diet": "non-veg"
         },
         {
           "name": "Mediterranean Bowl",
           "price": 699,
-          "description": "Falafels, Hummus, Herbed Rice, Harissa Hot Sauce, Tabbouleh, Roast Butternut Squash"
+          "description": "Falafels, Hummus, Herbed Rice, Harissa Hot Sauce, Tabbouleh, Roast Butternut Squash",
+          "diet": "veg"
         }
       ],
-
       "Salads": [
         {
           "name": "Flora House Salad",
           "price": 495,
-          "description": "Red & White Quinoa, Honey-Mustard & Sweet Chilli Dressing, Mixed Lettuce, Feta"
+          "description": "Red & White Quinoa, Honey-Mustard & Sweet Chilli Dressing, Mixed Lettuce, Feta",
+          "diet": "veg"
         },
         {
           "name": "Caesar Salad",
           "price": 495,
-          "description": "Classic Mayonnaise & Parmesan Dressing, Romaine Lettuce, Melba Toast"
+          "description": "Classic Mayonnaise & Parmesan Dressing, Romaine Lettuce, Melba Toast",
+          "diet": "veg"
         },
         {
           "name": "Burrata Salad",
           "price": 655,
-          "description": "Basil Pesto, Heirloom Tomatoes, Arugula, Baguette, Balsamic Glaze"
+          "description": "Basil Pesto, Heirloom Tomatoes, Arugula, Baguette, Balsamic Glaze",
+          "diet": "veg"
         },
         {
           "name": "Smoked Chicken Salad",
           "price": 545,
-          "description": "Chilli-Citrus Dressing, Chipotle Chicken, Mixed Lettuce, Black Olives, Red Onions, California Grapes & Jalapeno"
+          "description": "Chilli-Citrus Dressing, Chipotle Chicken, Mixed Lettuce, Black Olives, Red Onions, California Grapes & Jalapeno",
+          "diet": "non-veg"
         }
       ],
-
       "Soups": [
         {
           "name": "Zuppa Di Funghi",
           "price": 345,
-          "description": "Mixed Mushroom & Truffle Oil"
+          "description": "Mixed Mushroom & Truffle Oil",
+          "diet": "veg"
         },
         {
           "name": "Tuscan Tomato Soup",
           "price": 345,
-          "description": "Slow Roast Tomatoes & Basil-Garlic"
+          "description": "Slow Roast Tomatoes & Basil-Garlic",
+          "diet": "veg"
         },
         {
           "name": "Smoky Chicken Soup",
           "price": 369,
-          "description": "Smoked Chicken & Garlic Cream"
+          "description": "Smoked Chicken & Garlic Cream",
+          "diet": "non-veg"
         }
       ],
-
       "Side Kicks": [
         {
           "name": "Hummus Pita",
-          "price": 249
+          "price": 249,
+          "diet": "veg"
         },
         {
           "name": "Tzatziki",
-          "price": 249
+          "price": 249,
+          "diet": "veg"
         },
         {
           "name": "Garlic Bread",
-          "price": 219
+          "price": 219,
+          "diet": "veg"
         },
         {
           "name": "Garlic Bread With Cheese",
-          "price": 249
+          "price": 249,
+          "diet": "veg"
         },
         {
           "name": "Plain Croissant",
-          "price": 199
+          "price": 199,
+          "diet": "veg"
         }
       ],
-
       "Desserts": [
         {
           "name": "Classic Tiramisu",
-          "price": 395
+          "price": 395,
+          "diet": "non-veg" 
         }
       ],
-
       "Drinks (Beverages)": [
         {
           "name": "Abc",
-          "price": 309
+          "price": 309,
+          "diet": "veg"
         },
         {
           "name": "Orange Fresh Juice",
-          "price": 330
+          "price": 330,
+          "diet": "veg"
         },
         {
           "name": "Watermelon Fresh Juice",
-          "price": 289
+          "price": 289,
+          "diet": "veg"
         },
         {
           "name": "Pineapple Fresh Juice",
-          "price": 330
+          "price": 330,
+          "diet": "veg"
         },
         {
           "name": "Iced Caramel Latte",
-          "price": 339
+          "price": 339,
+          "diet": "veg"
         },
         {
           "name": "Iced French Vanilla Latte",
-          "price": 339
+          "price": 339,
+          "diet": "veg"
         },
         {
           "name": "Iced Latte",
-          "price": 299
+          "price": 299,
+          "diet": "veg"
         },
         {
           "name": "Iced Mango Matcha Latte",
-          "price": 389
+          "price": 389,
+          "diet": "veg"
         },
         {
           "name": "Iced Roasted Hazelnut Latte",
-          "price": 339
+          "price": 339,
+          "diet": "veg"
         },
         {
           "name": "Iced Spanish Latte",
-          "price": 339
+          "price": 339,
+          "diet": "veg"
         },
         {
           "name": "Iced Strawberry Matcha",
-          "price": 389
+          "price": 389,
+          "diet": "veg"
         },
         {
           "name": "Iced Tiramisu Latte",
-          "price": 339
+          "price": 339,
+          "diet": "veg"
         },
         {
           "name": "Bean Frappe Iced Vanilla",
-          "price": 349
+          "price": 349,
+          "diet": "veg"
         },
         {
           "name": "Iced Matcha",
-          "price": 369
+          "price": 369,
+          "diet": "veg"
         },
         {
           "name": "Peach Iced Tea",
-          "price": 269
+          "price": 269,
+          "diet": "veg"
         },
         {
           "name": "Lemon Iced Tea",
-          "price": 269
+          "price": 269,
+          "diet": "veg"
         },
         {
           "name": "Hibiscus Iced Tea",
-          "price": 269
+          "price": 269,
+          "diet": "veg"
         },
         {
           "name": "Kokum Chilli Spritz",
           "price": 349,
-          "description": "Kokum Crush, Sabza Seeds, Fresh Green Chilli, Lemonade"
+          "description": "Kokum Crush, Sabza Seeds, Fresh Green Chilli, Lemonade",
+          "diet": "veg"
         },
         {
           "name": "Citrus Berry Fizz",
           "price": 349,
-          "description": "Orange Chunks, Mint Leaves, Blueberry Crush, Sweet & Sour"
+          "description": "Orange Chunks, Mint Leaves, Blueberry Crush, Sweet & Sour",
+          "diet": "veg"
         },
         {
           "name": "Tropical Lush",
           "price": 349,
-          "description": "Passionfruit Puree, Elderflower, Fresh Pineapple Juice, Kaffir Lime Leaf"
+          "description": "Passionfruit Puree, Elderflower, Fresh Pineapple Juice, Kaffir Lime Leaf",
+          "diet": "veg"
         },
         {
           "name": "Melonen Minz Bliss",
           "price": 349,
-          "description": "Fresh Watermelon, Curry Leaves, Kokum Crush, Sweet & Sour"
+          "description": "Fresh Watermelon, Curry Leaves, Kokum Crush, Sweet & Sour",
+          "diet": "veg"
         },
         {
           "name": "Cilantro Citrus Splash",
           "price": 349,
-          "description": "Homemade Brine, Fresh Orange Juice, Fresh Coriander, Passionfruit"
+          "description": "Homemade Brine, Fresh Orange Juice, Fresh Coriander, Passionfruit",
+          "diet": "veg"
         },
         {
           "name": "Just Peachy",
           "price": 349,
-          "description": "Caramelised Peach, Citrus, Rose, with a hint of spices, tonic water"
+          "description": "Caramelised Peach, Citrus, Rose, with a hint of spices, tonic water",
+          "diet": "veg"
         },
         {
           "name": "Virgin Mint Mojito",
-          "price": 309
+          "price": 309,
+          "diet": "veg"
         },
         {
           "name": "Green Apple Mojito",
-          "price": 309
+          "price": 309,
+          "diet": "veg"
         },
         {
           "name": "Water Melon Mojito",
-          "price": 309
+          "price": 309,
+          "diet": "veg"
         },
         {
           "name": "Passion Fruit Mojito",
-          "price": 309
+          "price": 309,
+          "diet": "veg"
         },
         {
           "name": "Mixed Berry Granola Smoothie Bowl",
           "price": 489,
-          "description": "Toasted Rolled Oats, Mixed Berry Smoothie, Blueberries, Candied Nuts, Granola"
+          "description": "Toasted Rolled Oats, Mixed Berry Smoothie, Blueberries, Candied Nuts, Granola",
+          "diet": "veg"
         },
         {
           "name": "Chocolate & Oreo Shake",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Tiramisu Coco - Chocolate Shake",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Kit Kat Chocolate Shake",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Blueberry Shake",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Lotus Biscoff Shake",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Mango & Banana Smoothie",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Mixed Berry Smoothie",
-          "price": 379
+          "price": 379,
+          "diet": "veg"
         },
         {
           "name": "Cold Chocolate",
-          "price": 389
+          "price": 389,
+          "diet": "veg"
         }
       ]
     }

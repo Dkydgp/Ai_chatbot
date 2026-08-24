@@ -18,6 +18,10 @@ business_data = load_json("business.json")
 menu_data = load_json("menu.json")
 
 
+# ============================================================
+# KEYWORD GROUPS
+# ============================================================
+
 KEYWORD_GROUPS = {
     "pizza": ["pizza", "pizzas"],
     "pasta": ["pasta", "pastas"],
@@ -39,22 +43,45 @@ KEYWORD_GROUPS = {
         "non veg",
         "non-veg",
         "non vegetarian",
+        "non-vegetarian",
         "chicken",
         "fish",
         "prawn",
         "prawns",
         "salmon",
         "lamb",
-        "pepperoni"
+        "pepperoni",
+        "bacon",
+        "sausage",
+        "pork",
+        "egg",
+        "eggs",
+        "meat",
+        "seafood"
     ]
 }
 
 
+# ============================================================
+# NORMALIZE TEXT
+# ============================================================
+
 def normalize(text):
-    text = text.lower()
-    text = re.sub(r"[^a-z0-9\s₹]", " ", text)
+
+    text = str(text).lower()
+
+    text = re.sub(
+        r"[^a-z0-9\s₹]",
+        " ",
+        text
+    )
+
     return text
 
+
+# ============================================================
+# GET ALL MENU ITEMS
+# ============================================================
 
 def get_all_menu_items():
     """Return every menu item in one list."""
@@ -68,12 +95,60 @@ def get_all_menu_items():
         for item in category_items:
 
             item_copy = item.copy()
+
             item_copy["category"] = category
 
             items.append(item_copy)
 
     return items
 
+
+# ============================================================
+# GET FOOD TYPE
+# ============================================================
+
+def get_food_type(item):
+    """
+    Read the diet field directly from menu.json.
+
+    Expected values:
+        veg
+        non-veg
+    """
+
+    value = item.get("diet")
+
+    if value is None:
+        return ""
+
+    return str(value).lower().strip()
+
+
+# ============================================================
+# VEGETARIAN CHECK
+# ============================================================
+
+def is_vegetarian(item):
+
+    diet = get_food_type(item)
+
+    return diet == "veg"
+
+
+# ============================================================
+# NON-VEGETARIAN CHECK
+# ============================================================
+
+def is_non_vegetarian(item):
+
+    diet = get_food_type(item)
+
+    return diet == "non-veg"
+
+
+# ============================================================
+# CHEAPEST ITEM
+# ============================================================
 
 def get_cheapest_item(items=None):
     """Find the cheapest item."""
@@ -84,7 +159,10 @@ def get_cheapest_item(items=None):
     priced_items = [
         item
         for item in items
-        if isinstance(item.get("price"), (int, float))
+        if isinstance(
+            item.get("price"),
+            (int, float)
+        )
     ]
 
     if not priced_items:
@@ -96,6 +174,10 @@ def get_cheapest_item(items=None):
     )
 
 
+# ============================================================
+# MOST EXPENSIVE ITEM
+# ============================================================
+
 def get_most_expensive_item(items=None):
     """Find the most expensive item."""
 
@@ -105,7 +187,10 @@ def get_most_expensive_item(items=None):
     priced_items = [
         item
         for item in items
-        if isinstance(item.get("price"), (int, float))
+        if isinstance(
+            item.get("price"),
+            (int, float)
+        )
     ]
 
     if not priced_items:
@@ -117,7 +202,14 @@ def get_most_expensive_item(items=None):
     )
 
 
-def get_items_under_price(max_price, items=None):
+# ============================================================
+# ITEMS UNDER PRICE
+# ============================================================
+
+def get_items_under_price(
+    max_price,
+    items=None
+):
     """Return all items at or below a given price."""
 
     if items is None:
@@ -126,15 +218,24 @@ def get_items_under_price(max_price, items=None):
     return [
         item
         for item in items
-        if isinstance(item.get("price"), (int, float))
+        if isinstance(
+            item.get("price"),
+            (int, float)
+        )
         and item["price"] <= max_price
     ]
 
 
+# ============================================================
+# CATEGORY SEARCH
+# ============================================================
+
 def get_items_in_category(category_keyword):
     """Return menu items belonging to a category."""
 
-    category_keyword = normalize(category_keyword)
+    category_keyword = normalize(
+        category_keyword
+    )
 
     results = []
 
@@ -142,13 +243,16 @@ def get_items_in_category(category_keyword):
 
     for category, items in categories.items():
 
-        category_text = normalize(category)
+        category_text = normalize(
+            category
+        )
 
         if category_keyword in category_text:
 
             for item in items:
 
                 item_copy = item.copy()
+
                 item_copy["category"] = category
 
                 results.append(item_copy)
@@ -156,8 +260,17 @@ def get_items_in_category(category_keyword):
     return results
 
 
+# ============================================================
+# PRICE EXTRACTION
+# ============================================================
+
 def extract_price_limit(query):
-    """Extract price limits such as 'under 500' or 'below ₹700'."""
+    """
+    Extract price limits such as:
+    under 500
+    below ₹700
+    less than 600
+    """
 
     query = normalize(query)
 
@@ -172,19 +285,30 @@ def extract_price_limit(query):
 
     for pattern in patterns:
 
-        match = re.search(pattern, query)
+        match = re.search(
+            pattern,
+            query
+        )
 
         if match:
-            return int(match.group(1))
+            return int(
+                match.group(1)
+            )
 
     return None
 
+
+# ============================================================
+# EXPAND QUERY
+# ============================================================
 
 def expand_query(query):
 
     query = normalize(query)
 
-    words = set(query.split())
+    words = set(
+        query.split()
+    )
 
     expanded_words = set(words)
 
@@ -194,43 +318,31 @@ def expand_query(query):
             synonym in query
             for synonym in synonyms
         ):
-            expanded_words.add(group)
-            expanded_words.update(synonyms)
+
+            expanded_words.add(
+                group
+            )
+
+            expanded_words.update(
+                synonyms
+            )
 
     return expanded_words
 
 
-def is_vegetarian(item):
-
-    name = item.get("name", "").lower()
-    description = item.get("description", "").lower()
-
-    text = f"{name} {description}"
-
-    non_veg_words = [
-        "chicken",
-        "lamb",
-        "fish",
-        "prawn",
-        "prawns",
-        "salmon",
-        "pepperoni",
-        "bacon",
-        "sausage",
-        "pork"
-    ]
-
-    return not any(
-        word in text
-        for word in non_veg_words
-    )
-
+# ============================================================
+# SEARCH MENU
+# ============================================================
 
 def search_menu(query: str):
 
-    query_words = expand_query(query)
+    query_words = expand_query(
+        query
+    )
 
-    price_limit = extract_price_limit(query)
+    price_limit = extract_price_limit(
+        query
+    )
 
     wants_vegetarian = (
         "vegetarian" in query_words
@@ -239,7 +351,11 @@ def search_menu(query: str):
     )
 
     wants_non_vegetarian = (
-        "non_vegetarian" in query_words
+    "non_vegetarian" in query_words
+    or "non veg" in query_words
+    or "non-veg" in query_words
+    or "non vegetarian" in query_words
+    or "non-vegetarian" in query_words
     )
 
     results = []
@@ -250,8 +366,15 @@ def search_menu(query: str):
 
         for item in items:
 
-            name = item.get("name", "")
-            description = item.get("description", "")
+            name = item.get(
+                "name",
+                ""
+            )
+
+            description = item.get(
+                "description",
+                ""
+            )
 
             searchable_text = normalize(
                 f"{category} {name} {description}"
@@ -259,49 +382,77 @@ def search_menu(query: str):
 
             score = 0
 
+            # ------------------------------------------------
             # Keyword matching
+            # ------------------------------------------------
+
             for word in query_words:
 
-                if len(word) > 2 and word in searchable_text:
+                if (
+                    len(word) > 2
+                    and word in searchable_text
+                ):
+
                     score += 1
 
+            # ------------------------------------------------
             # Category matching
-            category_text = normalize(category)
+            # ------------------------------------------------
+
+            category_text = normalize(
+                category
+            )
 
             for word in query_words:
 
                 if word in category_text:
                     score += 2
 
+            # ------------------------------------------------
             # Dietary filtering
-            vegetarian = is_vegetarian(item)
+            # ------------------------------------------------
 
             if wants_vegetarian:
 
-                if vegetarian:
+                if is_vegetarian(item):
                     score += 5
+
                 else:
                     continue
 
             if wants_non_vegetarian:
 
-                if not vegetarian:
+                if is_non_vegetarian(item):
                     score += 5
+
                 else:
                     continue
 
+            # ------------------------------------------------
             # Price filtering
+            # ------------------------------------------------
+
             if price_limit is not None:
 
-                price = item.get("price")
+                price = item.get(
+                    "price"
+                )
 
-                if price is None:
+                if not isinstance(
+                    price,
+                    (int, float)
+                ):
                     continue
 
                 if price <= price_limit:
                     score += 5
+
                 else:
                     continue
+
+            # ------------------------------------------------
+            # Add result
+            # ------------------------------------------------
 
             if score > 0:
 
@@ -319,5 +470,10 @@ def search_menu(query: str):
     return results[:10]
 
 
+# ============================================================
+# BUSINESS INFORMATION
+# ============================================================
+
 def get_business_information():
+
     return business_data
