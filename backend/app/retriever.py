@@ -56,14 +56,108 @@ def normalize(text):
     return text
 
 
+def get_all_menu_items():
+    """Return every menu item in one list."""
+
+    items = []
+
+    categories = menu_data["menu"]["categories"]
+
+    for category, category_items in categories.items():
+
+        for item in category_items:
+
+            item_copy = item.copy()
+            item_copy["category"] = category
+
+            items.append(item_copy)
+
+    return items
+
+
+def get_cheapest_item(items=None):
+    """Find the cheapest item."""
+
+    if items is None:
+        items = get_all_menu_items()
+
+    priced_items = [
+        item
+        for item in items
+        if isinstance(item.get("price"), (int, float))
+    ]
+
+    if not priced_items:
+        return None
+
+    return min(
+        priced_items,
+        key=lambda item: item["price"]
+    )
+
+
+def get_most_expensive_item(items=None):
+    """Find the most expensive item."""
+
+    if items is None:
+        items = get_all_menu_items()
+
+    priced_items = [
+        item
+        for item in items
+        if isinstance(item.get("price"), (int, float))
+    ]
+
+    if not priced_items:
+        return None
+
+    return max(
+        priced_items,
+        key=lambda item: item["price"]
+    )
+
+
+def get_items_under_price(max_price, items=None):
+    """Return all items at or below a given price."""
+
+    if items is None:
+        items = get_all_menu_items()
+
+    return [
+        item
+        for item in items
+        if isinstance(item.get("price"), (int, float))
+        and item["price"] <= max_price
+    ]
+
+
+def get_items_in_category(category_keyword):
+    """Return menu items belonging to a category."""
+
+    category_keyword = normalize(category_keyword)
+
+    results = []
+
+    categories = menu_data["menu"]["categories"]
+
+    for category, items in categories.items():
+
+        category_text = normalize(category)
+
+        if category_keyword in category_text:
+
+            for item in items:
+
+                item_copy = item.copy()
+                item_copy["category"] = category
+
+                results.append(item_copy)
+
+    return results
+
+
 def extract_price_limit(query):
-    """
-    Detect simple budget questions such as:
-    - under 500
-    - below ₹600
-    - less than 700
-    - within 500
-    """
+    """Extract price limits such as 'under 500' or 'below ₹700'."""
 
     query = normalize(query)
 
@@ -165,17 +259,13 @@ def search_menu(query: str):
 
             score = 0
 
-            # -------------------------
             # Keyword matching
-            # -------------------------
-
             for word in query_words:
 
                 if len(word) > 2 and word in searchable_text:
                     score += 1
 
-            # Category matching gets extra weight
-
+            # Category matching
             category_text = normalize(category)
 
             for word in query_words:
@@ -183,10 +273,7 @@ def search_menu(query: str):
                 if word in category_text:
                     score += 2
 
-            # -------------------------
             # Dietary filtering
-            # -------------------------
-
             vegetarian = is_vegetarian(item)
 
             if wants_vegetarian:
@@ -203,10 +290,7 @@ def search_menu(query: str):
                 else:
                     continue
 
-            # -------------------------
             # Price filtering
-            # -------------------------
-
             if price_limit is not None:
 
                 price = item.get("price")
@@ -218,10 +302,6 @@ def search_menu(query: str):
                     score += 5
                 else:
                     continue
-
-            # -------------------------
-            # Save result
-            # -------------------------
 
             if score > 0:
 
